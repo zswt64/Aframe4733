@@ -4,11 +4,34 @@
   </head>
   <body>
     <a-scene>
-      <a-plane position="-2 0 -4" rotation="-90 0 0" width="10" height="4" color="FFFFFF" src="plane texture.jpeg"></a-plane>
-      <a-sky color="#000000" src="black texture.jpg"></a-sky>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#FFDC00" src="yellow texture.jpeg"></a-box>
-      <a-box position="-3 0.5 -3" rotation="0 50 0" color="#004B97" src="blue texture.jpeg"></a-box>
-      <a-entity light="type:directional; castShadow:true;" position="2 2 2"></a-entity>
+
+      <!--Plane-->
+      <a-plane position="-2 0 -4" rotation="-90 0 0" width="10" height="4" color="FFFFFF" src="plane texture.jpeg" shadow="receive:true"></a-plane>
+     
+      <!--Sky-->
+      <a-assets>
+        <img id="sky" src="black texture.jpeg">
+      </a-assets>
+      <a-sky src="#sky"></a-sky>
+      
+      <!--RedCube-->
+      <a-box position="-2.9 1.5 -3" rotation="0 100 0" color="#FFDC00" src="red texture.jpeg" shadow="receive: true"></a-box>
+      
+      <!--YellowCube-->
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#FFDC00" src="yellow texture.jpeg" shadow="receive: true"></a-box>
+      
+      <!--BlueCube-->
+      <a-box position="-3 0.5 -3" rotation="0 50 0" color="#004B97" src="blue texture.jpeg" shadow="receive: true"></a-box>
+      
+      <!--GreenCube-->
+      <a-box position="0.2 0.5 -4" rotation="0 90 0" color="#FFDC00" src="green texture.jpeg" shadow="receive: true"></a-box>
+      
+      <!--Shadow
+      <a-entity light="type:directional; castShadow:true;" position="-5 1 1" color="#FFFFFF"></a-entity>
+      <a-entity light="type: probe"></a-entity>-->
+      <a-entity light="type: ambient; intensity: 0.5;"></a-entity>
+      <a-entity light="type: directional; castShadow: true; intensity: 0.4;" position="-5 3 1.5"></a-entity>
+
     </a-scene>
   </body>
 </html>
