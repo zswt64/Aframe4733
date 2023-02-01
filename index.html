@@ -10,7 +10,7 @@
      
       <!--Sky-->
       <a-assets>
-        <img id="sky" src="black texture.jpeg">
+        <img id="sky" src="sky2 texture.jpeg">
       </a-assets>
       <a-sky src="#sky"></a-sky>
       
@@ -18,7 +18,7 @@
       <a-box position="-2.9 1.5 -3" rotation="0 100 0" color="#FFDC00" src="red texture.jpeg" shadow="receive: true"></a-box>
       
       <!--YellowCube-->
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#FFDC00" src="yellow texture.jpeg" shadow="receive: true"></a-box>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#F8EA0B" src="yellow2 texture.jpeg" shadow="receive: true"></a-box>
       
       <!--BlueCube-->
       <a-box position="-3 0.5 -3" rotation="0 50 0" color="#004B97" src="blue texture.jpeg" shadow="receive: true"></a-box>
@@ -27,8 +27,9 @@
       <a-box position="0.2 0.5 -4" rotation="0 90 0" color="#FFDC00" src="green texture.jpeg" shadow="receive: true"></a-box>
       
       <!--Shadow-->
-      <a-entity light="type: ambient; intensity: 0.6;"></a-entity>
-      <a-entity light="type: directional; castShadow: true; intensity: 0.4;" position="-5 3 1.5"></a-entity>
+      <a-entity light="type: ambient; intensity: 0.2;"></a-entity>
+      <a-entity light="type: directional; castShadow: true; intensity: 1.0;" position="-5 9 0.5"></a-entity> <!--shining on side-->
+      <a-entity light="type: directional; castShadow: true; intensity: 0.4;" position="-10 10 60"></a-entity> <!--shining in front-->
 
     </a-scene>
   </body>
